@@ -1,0 +1,358 @@
+<!--
+MIT License
+
+Copyright 2020 Markus "3e849f2e5c" Isberg
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Life after character mode</title>
+
+	<meta name="twitter:card" content="summary">
+	<meta name="twitter:site" content="@Kosblue2">
+	<meta name="twitter:title" content="Life after character mode">
+	<meta name="twitter:description" content="Hexcode's guide to 0.9.9 sub editor changes">
+	<meta name="twitter:image" content="https://kosblue.com/subeditor/thumbnail.png">
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<div class="kosblue">
+	<div class="header-container">
+		<div class="shadow header">
+			<div class="thumbnail-holder">
+				<img src="thumbnail.png" alt="thumbnail">
+			</div>
+			<div class="header-texts">
+				<a>
+					Life after character mode
+				</a>
+				<br>
+				<a class="footer">
+					Hexcode's guide to 0.9.9 sub editor changes
+				</a>
+			</div>
+		</div>
+	</div>
+
+	<div class="page shadow">
+		<div class="text-content">
+			<h1>
+				1. The removal of character mode
+			</h1>
+			<a>
+				As you might have noticed the character mode has been removed and has been fully integrated into edit
+				mode. I understand this is no small change and that's why I'm here explaining the new behavior.
+				<h2>
+					Opening inventories
+				</h2>
+				Item interfaces can be opened by either pressing <a class="highlight">E</a> or selecting the
+				<a class="highlight">Open</a> option from the <a class="highlight">right click context menu</a>.
+
+				<div class="image-showcase">
+					<div class="image-preview">
+						<a class="thumbnail">
+							<img src="images/contextmenuoption.jpg" alt="Context menu">
+							<span>
+								<img src="images/contextmenuoption.jpg" tmpsrc="images/contextmenuoption_full.png"
+								     alt="Thumbnail"/>
+							</span>
+						</a>
+						<a>The new "Open" option on the context menu.</a>
+					</div>
+
+					<div class="image-preview">
+						<a class="thumbnail">
+							<img src="images/pumpgui.jpg" alt="Pump GUI">
+							<span>
+								<img src="images/pumpgui.jpg" tmpsrc="images/pumpgui_full.png" alt="Thumbnail"/>
+							</span>
+						</a>
+						<a>Interfaces can be opened directly from edit mode.</a>
+					</div>
+
+					<div class="image-preview">
+						<a class="thumbnail">
+							<img src="images/weapons.jpg" alt="Syringe gun inventory">
+							<span>
+								<img src="images/weapons.jpg" tmpsrc="images/weapons_full.png" alt="Thumbnail"/>
+							</span>
+						</a>
+						<a>Works for hand held and wearable item inventories too!</a>
+					</div>
+				</div>
+
+				<h2>
+					Placing down items
+				</h2>
+				Previously the way to put items inside inventories was to place them into the world with edit mode and
+				then picking them up with character mode and transferring the items over. In 9.9.0 you can deposit items
+				by simply <a class="highlight">selecting an item from the entity catalog</a> at the bottom, this will
+				put
+				an infinite stack of that item on your cursor and allows you to place it down by clicking on slots.
+				Optionally you can also <a class="highlight">shift click</a> on an item in the catalog to directly
+				deposit one in. You can destroy the infinite stack by <a class="highlight">right clicking</a> anywhere on your screen.<br>
+				<br>
+				To get rid of an item you can either drag it back into the entity catalog or by
+				<a class="highlight">holding control and clicking</a> on the item.<br>
+				<br>
+				If you need to edit the contents inside a toolbox for example you can drag it out from the inventory
+				the usual way and open it up, after you are done you can drag the toolbox on top of a container while
+				<a class="highlight">holding shift</a> to place it back in. Be careful not to
+				drag the item on top of the entity menu! This will delete your item instead of drop it outside the
+				container.<br>
+
+				<div class="image-showcase">
+					<div class="image-preview">
+						<a class="thumbnail">
+							<img src="images/cabinetdragdrop.jpg" alt="Deposit items">
+							<span>
+								<img src="images/cabinetdragdrop.jpg" tmpsrc="images/cabinetdragdrop_full.png" alt="Thumbnail"/>
+							</span>
+						</a>
+						<a>Placing down items directly into containers.</a>
+					</div>
+
+					<div class="image-preview">
+						<a class="thumbnail">
+							<img src="images/fastdragging.jpg" alt="Fast drag items">
+							<span>
+								<img src="images/fastdragging.jpg" tmpsrc="images/fastdragging_full.png" alt="Thumbnail"/>
+							</span>
+						</a>
+						<a>Hold down left click and drag it across the slots to quickly place down multiple items!</a>
+					</div>
+
+					<div class="image-preview">
+						<a class="thumbnail">
+							<img src="images/controlclickdelete.jpg" alt="Deleting items">
+							<span>
+								<img src="images/controlclickdelete.jpg" tmpsrc="images/controlclickdelete_full.png"
+								     alt="Thumbnail"/>
+							</span>
+						</a>
+						<a>Holding down control and clicking on an item removes it.</a>
+					</div>
+
+					<div class="image-preview">
+						<a class="thumbnail">
+							<img src="images/toolboxcabinet.jpg" alt="Dragging items">
+							<span>
+								<img src="images/toolboxcabinet.jpg" tmpsrc="images/toolboxcabinet_full.png" alt="Thumbnail"/>
+							</span>
+						</a>
+						<a>Dragging an item over a steel cabinet while holding shift will deposit it in.</a>
+					</div>
+				</div>
+
+				<h3 class="protip">
+					Protips
+				</h3>
+				You can also place <a class="highlight">item assemblies</a> into inventories! This can be used to place
+				down
+				pre-filled diving suits, loaded weapons or sets of items with ease. <br>
+				<br>
+				Items like diving suits and toolboxes can be loaded easily by dragging another item on top of it from
+				the item catalog.
+
+				<div class="image-showcase">
+					<div class="image-preview">
+						<a class="thumbnail">
+							<img src="images/itemassemblies.jpg" alt="Item assemblies">
+							<span>
+								<img src="images/itemassemblies.jpg" tmpsrc="images/itemassemblies_full.png" alt="Thumbnail"/>
+							</span>
+						</a>
+						<a>Placing down an item assembly consisting of 5 copper into a steel cabinet.</a>
+					</div>
+
+					<div class="image-preview">
+						<a class="thumbnail">
+							<img src="images/toolboxload.jpg" alt="Toolbox loading">
+							<span>
+								<img src="images/toolboxload.jpg" tmpsrc="images/toolboxload_full.png" alt="Thumbnail"/>
+							</span>
+						</a>
+						<a>Filling a toolbox with steel.</a>
+					</div>
+				</div>
+			</a>
+
+			<h1>
+				2. Editing multiple properties at once
+			</h1>
+			<a>
+				This highly requested feature has finally been implemented! If you have multiple entities selected and
+				change a property in the top right entity editor it will apply the change to all items in your
+				selection.
+				This works for any item and any property. Colors, toggles, labels, tags... you name it.<br>
+				<br>
+				NB. While for example <a class="highlight">OxygenGenerator</a> and <a
+					class="highlight">Engine</a>
+				both have the <a class="highlight">Power Consumption</a> property they will not be synced because they are
+				part of
+				different item components, but for example if you edit edit the <a class="highlight">Auto fill</a>
+				property on a supplies cabinet and a steel locker they will since the property is part of the
+				<a class="highlight">ItemContainer</a> component which both items have.
+
+				<div class="image-showcase">
+					<div class="image-preview">
+						<a class="thumbnail">
+							<img src="images/purpleventure.jpg" alt="Purple venture">
+							<span>
+								<img src="images/purpleventure.jpg" tmpsrc="images/purpleventure_full.png" alt="Thumbnail"/>
+							</span>
+						</a>
+						<a>Poor Venture has gone thru a lot during my testing.</a>
+					</div>
+
+					<div class="image-preview">
+						<a class="thumbnail">
+							<img src="images/lightcolor.jpg" alt="Green lights">
+							<span>
+								<img src="images/lightcolor.jpg" tmpsrc="images/lightcolor_full.png" alt="Thumbnail"/>
+							</span>
+						</a>
+						<a>Changing light colors.</a>
+					</div>
+				</div>
+			</a>
+
+			<h1>
+				3. New shortcuts
+			</h1>
+			<a>
+				I've implemented lots of new keyboard shortcuts into the sub editor, try them out!
+
+				<ul>
+					<li><a class="highlight">Ctrl+1, Control+2</a> - Switch between edit and wiring mode.</li>
+					<li><a class="highlight">Q</a> - Toggle entity catalog visibility.</li>
+					<li><a class="highlight">F</a> - Centers the camera to selection.</li>
+					<li><a class="highlight">E</a> - Open item interface.</li>
+					<li><a class="highlight">Ctrl+A</a> - Select or deselect everything.</li>
+					<li><a class="highlight">Ctrl+S</a> - Show save menu.</li>
+					<li><a class="highlight">Ctrl+Shift+S</a> - Quick-save your submarine.</li>
+					<li>Holding down <a class="highlight">shift</a> while dragging or resizing items disables grid
+						snapping.
+					</li>
+				</ul>
+
+				<div class="image-showcase">
+					<div class="image-preview">
+						<a class="thumbnail">
+							<img src="images/saveshortcut.jpg" alt="Save shortcut">
+							<span>
+								<img src="images/saveshortcut.jpg" tmpsrc="images/saveshortcut_full.png" alt="Thumbnail"/>
+							</span>
+						</a>
+						<a>Buttons now show their keyboard shortcut in tooltips.</a>
+					</div>
+				</div>
+			</a>
+
+			<h1>
+				4. Auto saving
+			</h1>
+			<a>
+				You might have noticed that there is a new button on the <a class="highlight">Load</a> menu called
+				<a class="highlight">Load Autosave</a>. Every 5 minutes or when the game is paused the editor will
+				automatically save your submarine into a temporary file located in
+				<a class="highlight">Submarines/.AutoSave/AutoSave.sub</a> which will not show up in your submarine
+				list.<br>
+				<br>
+				If your power goes out, the game crashes, a random chimp event occurs or
+				something else horrible happens while you spent hours wiring the submarine and forgot to save you can
+				recover the AutoSave submarine from the <a class="highlight">Load</a> menu.<br>
+				<br>
+				NB. All submarines share the same auto save file so be careful what you load before recovering your
+				submarine.
+			</a>
+
+			<h1>
+				5. Quality of life
+			</h1>
+			<a>
+				Small changes on the surface, huge in practice.
+
+				<ul>
+					<li>Hovering over multiple wires brings up a context menu allowing you to select a specific one.
+					</li>
+					<li>Wires now render on top of everything in wiring mode.</li>
+					<li>Holding down <a class="highlight">shift and right clicking</a> lets your change the background
+						color of the submarine editor.
+					</li>
+					<li>Buttons have more padding now to prevent accidental clicks.</li>
+					<li><a class="highlight">Generate waypoints</a> now has a confirmation popup.</li>
+					<li><a class="highlight">Right clicking</a> the catalog search bar now empties it.</li>
+					<li>Changing categories no longer clears the search text.</li>
+				</ul>
+
+				<div class="image-showcase">
+					<div class="image-preview">
+						<a class="thumbnail">
+							<img src="images/wiremenu.jpg" alt="Wire context menu">
+							<span>
+								<img src="images/wiremenu.jpg" tmpsrc="images/wiremenu_full.png" alt="Thumbnail"/>
+							</span>
+						</a>
+						<a>Wire context menu.</a>
+					</div>
+
+					<div class="image-preview">
+						<a class="thumbnail">
+							<img src="images/wiresontop.jpg" alt="Wires always on top">
+							<span>
+								<img src="images/wiresontop.jpg" tmpsrc="images/wiresontop_full.png" alt="Thumbnail"/>
+							</span>
+						</a>
+						<a>New wire rendering.</a>
+					</div>
+
+					<div class="image-preview">
+						<a class="thumbnail">
+							<img src="images/backgroundcolor.jpg" alt="Background color">
+							<span>
+								<img src="images/backgroundcolor.jpg" tmpsrc="images/backgroundcolor_full.png" alt="Thumbnail"/>
+							</span>
+						</a>
+						<a>Background color changer.</a>
+					</div>
+				</div>
+			</a>
+			<h1>
+				Thank you for reading
+			</h1>
+			<a>
+				Last updated by Hexcode on Wednesday April 7th 2020 7:49 PM EET.<br>
+				<br>
+				<div id="easteregg">Easter Egg</div>
+			</a>
+		</div>
+	</div>
+	<script src="js/script.js"></script>
+</body>
+</html>
